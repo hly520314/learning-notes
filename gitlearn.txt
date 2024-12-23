@@ -1,0 +1,17 @@
+git学习笔记
+mkdir:Make directory 新建目录文件夹
+cd:Chang directory 切换目录文件夹
+git add:git add *.txt:git add . :添加到暂存区
+git commit：提交暂存区内容
+git log:查看仓库提交历史,使用--online参数来简洁查看提交记录
+rm file:git add file:先从工作区删除文件,然后再暂存删除文件
+git rm <file>:把文件从工作区和暂存区同时删除
+git rm --cached<file>:把文件从暂存区删除，但保留自在当前工作区。
+git rm -r*:递归删除某个目录下所有的子目录和文件。删除后记得提交。
+git remote add <shortname> <url>:添加一个新的远程git仓库，同时指定一个方便应用的简写，并且使用简写代替整个url.
+git remote show <remote>:查看某一个远程仓库的信息。
+git remote rename:修改一个远程仓库的简写名：git remote rename pb paul:将pb改为paul
+git remote rm:移除一个远程仓库，一旦你使用这种方式删除了一个远程仓库，那么所有和这个远程仓库相关的远程跟踪分支以及配置信息也会一起被删除。
+git fetch pb:拉取pb仓库中有但你没有的信息.
+git pull:自己抓取后合并该远程分支到当前分支。
+git push <remote> <branch>:指origin,master:将你的项目推送到远端仓库
