@@ -15,3 +15,4 @@ git remote rm:移除一个远程仓库，一旦你使用这种方式删除了一
 git fetch pb:拉取pb仓库中有但你没有的信息.
 git pull:自己抓取后合并该远程分支到当前分支。
 git push <remote> <branch>:指origin,master:将你的项目推送到远端仓库
+echo "第一" > file1.txt:创建一个文件，并输入 第一
