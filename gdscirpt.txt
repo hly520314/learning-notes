@@ -1,0 +1,14 @@
+			GDScript代码
+  extends: 关键字定义了这个脚本所继承或扩展的类。
+	eg:extends Sprite2D
+  func:定义一个函数 
+	eg:func _init():
+	       print("hello,world")  表示定义了一个名为 _init的函数
+  var:可以定义新变量。如果你把它放在脚本顶部，定义的就是类的属性。在函数内部，定义的则是局部变量：只在函数的作用域中存在。
+	eg:var velocity = Vector2.UP.rotated(rotation) * speed   
+	   position += velocity * delta   定义了一个名为velocity用于表示方向和速度的2D向量。用这个方向与speed相乘后得到用于移动节点的速度。(position应该是系统已有的定义)，Vector2.up,一个指向上方的向量，再调用Vector2的rotated()方法可以将其进行旋转。
+  var speed = 400:以400像素每秒的单位移动
+  var angular_spped = PI:以弧度每秒为单位的角速度 
+  _process():在主循环的处理步骤中被调用。处理发生在每一帧，并尽可能快。
+	eg:func _process(delta): 
+	       rotation += angular_speed * delta:每帧增	加旋转量。这里rotation可控制节点旋转，以弧度为单位。delta是以秒末为单位，此处意思便是该函数按秒进行处理。_process属于Godot的虚函数，也就是你可以覆盖的与引擎通信的内置函数
